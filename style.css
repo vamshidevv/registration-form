@@ -1,0 +1,317 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  /* background-image: linear-gradient(
+    45deg,
+    rgb(209, 230, 230),
+    rgba(38, 70, 99, 0.986)
+  ); */
+
+  height: 100vh;
+  /* display: flex; */
+
+  transition: 2s all;
+
+  /* opacity: 0; */
+}
+#sideimg {
+  height: 650px;
+  width: 650px;
+  object-fit: cover;
+  opacity: 0;
+  transform: scale(0.3);
+  transition: 0.5s all;
+  position: relative;
+  top: 50px;
+  left: -250px;
+}
+
+.form-container {
+  position: relative;
+  border: 1px solid white;
+  /* background-color: white; */
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  width: 500px;
+  max-width: 100%;
+  box-shadow: 0 0 4px white;
+  border-radius: 5px;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.5s all;
+  transform: scale(0.3);
+  /* margin: 20px auto 0 60%; */
+  float: right;
+  left: 20px;
+
+  top: 20px;
+}
+
+.container.show .form-container {
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1);
+  left: -350px;
+}
+.container.show #sideimg {
+  opacity: 1;
+  transform: scale(0.9);
+  left: 150px;
+}
+.container.show #data{
+  display: none;
+}
+
+.container.show {
+  /* background-color: rgba(38, 70, 99, 0.986); */
+  background-image: url(blur2.jpg);
+  object-fit: contain;
+  opacity: 1;
+  background-position: center;
+  height: 100vh;
+}
+.container.show #form-open {
+  background-color: rgba(24, 63, 136, 0.986);
+  color: white;
+  border-bottom: 1px solid white;
+}
+.container.show .home {
+  background-color: transparent;
+  border: 2px solid rgba(38, 70, 99, 0.986);
+  color: rgba(38, 70, 99, 0.986);
+}
+.container.show #refBtn {
+  opacity: 0;
+}
+form input {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  border: none;
+  border-bottom: 1px solid rgba(93, 163, 209, 0.836);
+  background-color: rgba(233, 223, 223, 0.26);
+  font-size: 17px;
+  letter-spacing: 1.2px;
+}
+form input:hover {
+  background-color: rgba(255, 255, 255, 0.699);
+}
+#genderInp:hover {
+  background-color: rgba(255, 255, 255, 0.699);
+}
+#genderInp:hover label {
+  color: #000;
+}
+select:hover {
+  background-color: rgba(255, 255, 255, 0.699);
+}
+label {
+  font-weight: 500;
+  letter-spacing: 1.2px;
+  cursor: pointer;
+  color: white;
+}
+form label {
+  display: inline-block;
+  /* border: 1px solid green; */
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+#genderInp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(233, 223, 223, 0.26);
+  border-bottom: 1px solid rgba(93, 163, 209, 0.836);
+  border-radius: 5px;
+  /* border: 2px solid red; */
+  margin-top: 10px;
+  margin-bottom: 7px;
+  padding: 3px;
+}
+
+/* #chkInp { */
+/* display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(233, 223, 223, 0.26);
+  border-bottom: 1px solid rgba(93, 163, 209, 0.836); */
+/* border-radius: 5px; */
+/* border: 2px solid red; */
+/* margin-top: 10px;
+  margin-bottom: 7px;
+  padding: 7px; */
+/* } */
+
+select {
+  background-color: rgba(233, 223, 223, 0.26);
+  width: 100%;
+  padding: 5px;
+  border: none;
+  border-bottom: 1px solid rgba(93, 163, 209, 0.836);
+  margin-bottom: 5px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#submitBtn {
+  position: relative;
+  top: 50%;
+  left: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5px;
+  margin-top: 15px;
+  /* border: 2px solid red; */
+  height: 40px;
+  width: 80%;
+  border-radius: 6px;
+  font-size: 15px;
+  background-color: rgba(24, 63, 136, 0.986);
+
+  color: white;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+}
+#submitBtn:hover {
+  background-color: cadetblue;
+}
+#headingTxt {
+  background-color: rgba(0, 0, 0, 0.815);
+  color: white;
+  text-align: center;
+  padding: 8px;
+  border-radius: 6px;
+  margin-bottom: 17px;
+  letter-spacing: 1.2px;
+  font-size: 19px;
+}
+#submited {
+  text-align: center;
+  margin-top: 10px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+}
+table {
+  margin: 20px auto;
+  padding: 10px;
+  border-collapse: collapse;
+}
+table th {
+  padding: 10px;
+}
+table td {
+  padding: 10px 30px;
+}
+#nav-bar {
+  background-color: transparent;
+  background-image: linear-gradient(
+    45deg,
+    rgb(6, 19, 19),
+    rgba(24, 63, 136, 0.986)
+  );
+  color: rgba(38, 70, 99, 0.986);
+  height: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 150px;
+}
+
+.home {
+  background-color: rgba(24, 63, 136, 0.986);
+  height: 40px;
+  width: 100px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 19px;
+  cursor: pointer;
+  color: white;
+  transition: 0.3s all;
+  border: none;
+  border-bottom: 1px solid white;
+  outline: none;
+  border-radius: 6px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+}
+
+.registration {
+  /* background-color: rgba(38, 70, 99, 0.986); */
+  background-color: rgba(24, 63, 136, 0.4);
+  border-radius: 6px;
+  line-height: 40px;
+  text-align: center;
+  height: 40px;
+  width: 150px;
+  font-size: 19px;
+  cursor: pointer;
+  transition: 0.3s all;
+  /* color: rgba(38, 68, 99, 0.986); */
+  color: white;
+  border: 1px solid rgba(38, 68, 99, 0.986);
+  font-weight: 600;
+  letter-spacing: 1.2px;
+}
+
+.registration:hover {
+  background-color: rgba(24, 63, 136, 0.986);
+  color: white;
+  border-radius: 6px;
+}
+#refBtn {
+  height: 45px;
+  width: 45px;
+  background-color: transparent;
+  border: none;
+  border-radius: 45px;
+  cursor: pointer;
+  transition: 0.3s all;
+  color: white;
+  opacity: 1;
+}
+#textContainer {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+#refBtn:hover {
+  background-color: rgb(209, 230, 230);
+  color: rgba(3, 22, 41, 0.986);
+  text-decoration: underline;
+}
+#refBtn:visited {
+  background-color: red;
+  color: rgba(3, 22, 41, 0.986);
+  text-decoration: underline;
+}
+a {
+  text-decoration: none;
+  color: none;
+}
+a:hover {
+  text-decoration: underline;
+  color: white;
+}
+p {
+  font-size: 14px;
+}
+#data{
+  display: block;
+
+}

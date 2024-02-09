@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>registration form</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <div id="nav-bar">
+          <div id="textContainer">
+            <!-- <a href="Home.html">  -->
+            <button class="home">Home</button>
+            <!-- </a> -->
+            <!-- <a href="index.html"> -->
+            <button class="registration" id="form-open">Registration</button>
+            <!-- </a> -->
+          </div>
+
+          <div>
+            <button id="refBtn" onclick="testFunC()">
+              <ion-icon
+                name="refresh-outline"
+                style="height: 30px; width: 30px; background-color: transparent"
+              ></ion-icon>
+            </button>
+          </div>
+        </div>
+        <div id="data">
+          <table id="userTable" border="1">
+            <thead>
+              <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Mobile No</th>
+                <th>Gender</th>
+                <th>Country</th>
+                <th>State</th>
+                <th>City</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+
+        <img src="loginpng.png" alt="sideimg" id="sideimg" />
+
+        <!-- <div class="container"> -->
+        <div class="form-container">
+          <form id="fm">
+            <h2 id="headingTxt">Registration Form</h2>
+            <div>
+              <label for="fname">First Name* : </label>
+              <input
+                type="text"
+                id="fname"
+                oninput="fnameHandle()"
+                class="inptField"
+                placeholder="john"
+              />
+              <p id="fnameErr"></p>
+            </div>
+            <div>
+              <label for="lname">Last Name* : </label>
+              <input
+                type="text"
+                id="lname"
+                oninput="lnamehandle()"
+                class="inptField"
+                placeholder="Doe"
+              />
+              <p id="lnameErr"></p>
+            </div>
+            <div>
+              <label for="em">Email* : </label>
+              <input
+                type="email"
+                id="em"
+                oninput="emailHandle()"
+                class="inptField"
+                placeholder="xyz@gmail.com"
+              />
+              <p id="emailErr"></p>
+            </div>
+            <div>
+              <label for="mo">Mobile No :</label>
+              <input
+                type="number"
+                id="mo"
+                oninput="mobileHandle()"
+                class="inptField"
+                placeholder="No should starts from 6 or 9"
+              />
+              <p id="mobileErr"></p>
+            </div>
+            <div id="genderInp">
+              <label>Gender:</label>
+              <input
+                type="radio"
+                name="gender"
+                id="male"
+                class="inptField"
+                oninput="maleHandle()"
+              />Male
+              <input
+                type="radio"
+                name="gender"
+                id="female"
+                class="inptField"
+                oninput="femaleHandle()"
+              />Female
+              <input
+                type="radio"
+                name="gender"
+                id="other"
+                class="inptField"
+                oninput="otherHandle()"
+              />Other
+            </div>
+            <p id="genderErr"></p>
+
+            <!-- <div id="chkInp">
+            <label>Hobbies:</label>
+            <input type="checkbox" id="chk" oninput="handleInput()" />cricket
+            <input type="checkbox" id="chk" oninput="handleInput()" />singing
+            <input type="checkbox" id="chk" oninput="handleInput()" />reading
+          </div>
+          <div id="hobErr"></div> -->
+
+            <div>
+              <label for="">Country</label>
+              <select id="country" class="inptField" onchange="handleStates()">
+                <option value="">---Select a Country---</option>
+                <option value="India">India</option>
+                <option value="USA">USA</option>
+                <option value="Spain">Spain</option>
+              </select>
+            </div>
+            <p id="countErr"></p>
+
+            <div>
+              <label for="">State</label>
+              <select id="selectState" onchange="handleCities()">
+                <option value="">---Select State---</option>
+              </select>
+            </div>
+            <p id="stateErr"></p>
+
+            <div>
+              <label for="">City</label>
+              <select id="selectCity" onchange="cityhandle()">
+                <option value="">---Select City---</option>
+              </select>
+              <p id="cityErr"></p>
+            </div>
+
+            <!-- <div>
+            <label for="lname">Date : </label>
+            <input
+              type="date"
+              id="dt"
+              oninput="dateHandle()"
+              class="inptField"
+            />
+            <div id="dateErr"></div>
+          </div>
+          <div>
+            <label for="lname">Upload File : </label>
+            <input
+              type="file"
+              id="file"
+              oninput="fileHandle()"
+              class="inptField"
+            />
+            <div id="fileErr"></div>
+          </div> -->
+          </form>
+          <div>
+            <button type="submit" id="submitBtn" onclick="registerBtn()">
+              Submit
+            </button>
+          </div>
+          <div id="submited"></div>
+        </div>
+      </nav>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>

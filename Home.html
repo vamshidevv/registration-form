@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nav Bar</title>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Montserrat", sans-serif;
+      }
+      #nav-bar {
+        background-image: linear-gradient(
+          45deg,
+          rgb(209, 230, 230),
+          rgba(38, 70, 99, 0.986)
+        );
+        color: rgba(38, 70, 99, 0.986);
+        height: 60px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 150px;
+      }
+
+      .home {
+        background-color: rgba(38, 70, 99, 0.986);
+        color: white;
+        height: 40px;
+        width: 100px;
+        line-height: 40px;
+        text-align: center;
+        font-size: 19px;
+        cursor: pointer;
+        transition: 0.3s all;
+        border-radius: 6px;
+      }
+      .registration {
+        color: rgba(38, 70, 99, 0.986);
+        text-decoration: none;
+        transition: 0.3s all;
+      }
+      .registration h2 {
+        line-height: 40px;
+        text-align: center;
+        height: 40px;
+        width: 150px;
+        font-size: 19px;
+        cursor: pointer;
+      }
+      .home:hover {
+        background-color: rgba(38, 70, 99, 0.986);
+        color: white;
+        border-radius: 6px;
+      }
+      #refBtn {
+        height: 45px;
+        width: 45px;
+        background-color: transparent;
+        border: none;
+        border-radius: 45px;
+        cursor: pointer;
+        transition: 0.3s all;
+        color: white;
+      }
+      #textContainer {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+      }
+
+      .registration:hover {
+        background-color: rgba(38, 70, 99, 0.986);
+        color: white;
+        border-radius: 6px;
+        text-decoration: underline;
+      }
+
+      #refBtn:hover {
+        background-color: rgb(209, 230, 230);
+        color: rgba(3, 22, 41, 0.986);
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div id="nav-bar">
+        <div id="textContainer">
+          <h2 class="home">Home</h2>
+          <a href="index.html" class="registration">
+            <h2>Registration</h2>
+          </a>
+        </div>
+
+        <div>
+          <button id="refBtn" onclick="testFunC()">
+            <ion-icon
+              name="refresh-outline"
+              style="height: 30px; width: 30px; background-color: transparent"
+            ></ion-icon>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </body>
+  <script src="index.js"></script>
+</html>
